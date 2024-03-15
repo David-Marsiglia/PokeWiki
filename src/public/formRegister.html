@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/styleLogin.css">
+        <title>Registrase</title>
+    </head>
+    <body>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="/register" method="post">
+                        <h2>Datos del maestro</h2>
+                        <div class="inputbox">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <input type="text" placeholder="." id="nombre" name="nombre" required>
+                            <label for="">Nombre</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" placeholder="." id="contraseña" name="contraseña" required>
+                            <label for="">Contraseña</label>
+                        </div>
+                        <button type="submit">Registrarme</button>
+                        <div class="register">
+                            <p>Ya tengo una cuenta <a href="/login">Ingresar</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+    </body>
+    
+
+</html>
