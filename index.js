@@ -54,7 +54,12 @@ app.post('/register', insertar);
 
 app.post('/login', login);
 app.get('/poke-detail', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/public/pokemonDetail.html'));
+    if (req.session.usuarioLogueado) {
+        res.sendFile(path.join(__dirname + '/src/public/pokemonDetail.html'));
+      } else {
+        res.redirect('/login');
+      }
+    
 });
 app.get('/logout', (req, res) => {
     req.session.destroy(()=>{

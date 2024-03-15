@@ -6,7 +6,7 @@ class Vista {
     const userType = document.querySelector("#userType");
     
     const div = document.createElement("div");
-    div.classList.add("pokemon");
+    div.classList.add("pokemon_" + data.id);
     div.innerHTML = `
         <div class="pokemon-imagen">
             <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name}">
@@ -18,14 +18,16 @@ class Vista {
         </div>
     `;
     pokemonsContainer.append(div);
+    
     if(user == "0"){
       userType.textContent = "Maestro Pokemon";
-      document.querySelector(".pokemon").onclick = function () {
+      document.querySelector(".pokemon_" + data.id).onclick = function () {
         window.location.href = "poke-detail?pokemon=" + encodeURIComponent(data.id);
       };
+      
     }else{
       userType.textContent = "Invitado";
-      document.querySelector(".pokemon").onclick = function () {
+      document.querySelector(".pokemon_" + data.id).onclick = function () {
         window.location.href = "login";
       };
     }
