@@ -1,4 +1,4 @@
-import { insertarDatos } from "../model/insertUser.js";
+import { insertarDatos } from "../model/InsertUser.js";
 import { consultarDatos } from "../model/LoginModel.js";
 
 export async function insertar(req, res) {
@@ -10,12 +10,12 @@ export async function insertar(req, res) {
         if (err) {
           console.log(err);
         } else {
-          console.log("primer logro");
-          res.send("LO LOGRASTE!!");
+          res.redirect("/register?err=false");
         }
       });
     } else {
-      res.send("USUARIO YA EXISTE!!");
+      res.redirect("/register?err=true");
     }
   });
 }
+

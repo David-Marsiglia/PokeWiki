@@ -1,4 +1,4 @@
-import { connection } from './dbConector.js';
+import { connection } from './DbConector.js';
 export async function consultarDatos(datos, callback) {
     const name = datos.nombre;
     const pass = datos.contraseña;

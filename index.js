@@ -1,10 +1,8 @@
 import express, { application } from 'express';
-import { connection } from './src/model/dbConector.js';
-import { insertar } from './src/controller/ControllerUser.js';
+import { insertar } from './src/controller/RegisterController.js';
 import { login } from './src/controller/LoginController.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { error } from 'console';
 import session from 'express-session'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,11 +10,12 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(session({
-    secret: 'tu_secreto',
+    secret: 'secreto',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false } // Recuerda cambiar a true en producción
   }));
+
 app.listen('10000')
 
 app.use(express.urlencoded({extended:false}));
@@ -31,7 +30,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/public/formLogin.html'));
+    if (req.session.usuarioLogueado) {
+        res.redirect('/');
+      } else {
+        res.sendFile(path.join(__dirname + '/src/public/formLogin.html'));
+      }
+    
 });
 
 app.get('/register', (req, res) => {
@@ -46,7 +50,9 @@ app.get('/home', (req, res) => {
     
 });
 app.get('/home-guest', (req, res) => {
+    
     res.sendFile(path.join(__dirname + '/src/public/homePage.html'));
+    
 });
 
 

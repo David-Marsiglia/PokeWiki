@@ -1,4 +1,4 @@
-class Vista {
+class AddViewHome {
   addViewPokemonList(data) {
     const pokemonsContainer = document.querySelector(".pokemon-container");
     let urlParams = new URLSearchParams(window.location.search);
@@ -7,6 +7,7 @@ class Vista {
     
     const div = document.createElement("div");
     div.classList.add("pokemon_" + data.id);
+    div.id = "pokemon"
     div.innerHTML = `
         <div class="pokemon-imagen">
             <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name}">
@@ -28,7 +29,21 @@ class Vista {
     }else{
       userType.textContent = "Invitado";
       document.querySelector(".pokemon_" + data.id).onclick = function () {
-        window.location.href = "login";
+        Swal.fire({
+          icon: 'error',
+          title: '¡Lo siento!',
+          text: 'Los invitados no tienen acceso a los detalles ',
+          showCancelButton: true,
+          confirmButtonText: 'Iniciar sesión',
+          cancelButtonText: 'Registrarme',
+          allowOutsideClick: true,
+       }).then((result) => {
+          if (result.isConfirmed == true) {
+              window.location.href = "/login";
+          }else if (result.dismiss === Swal.DismissReason.cancel) {
+            window.location.href = "/register";
+        }
+        });
       };
     }
     

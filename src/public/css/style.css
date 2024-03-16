@@ -34,7 +34,7 @@ main {
     }
 }
 
-.pokemon {
+#pokemon {
     border-radius: 1rem;
     background-color: var(--clr-white);
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
