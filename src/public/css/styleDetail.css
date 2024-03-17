@@ -15,7 +15,7 @@ body {
     border: 2px solid rgb(146, 146, 146);
     border-radius: 20px;
     background-color: rgba(61, 60, 60, 0.753);
-    margin: 50px 100px;
+    margin: 20px 100px;
     padding: 20px;
 }
 
@@ -26,7 +26,9 @@ body {
     padding: 30px;
     order: 5;
 }
-
+#name{
+    border-bottom: 4px solid #ffc107;
+}
 .pokemon__name{
     width: 100%;
     padding: 7px;
@@ -35,10 +37,9 @@ body {
     background: transparent;
     color: #fff;
 }
-#name{
-    border-bottom: 4px solid #ffc107;
+.row{
+    text-align: left;
 }
-
 
 .pokemon-img div{
     padding: 10px;
@@ -62,7 +63,17 @@ body {
     width: 60%;
 }
 .pokemon-img img {
-    width: 86%;
-   
-    
+    width: 86%; 
+}
+.detail-other{
+    display: flex;
+    min-width: 400px;
+    max-width: 1140px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 2px solid rgb(146, 146, 146);
+    border-radius: 16px;
+    background-color: rgba(61, 60, 60, 0.753);
+    margin: 20px 100px;
+    padding: 20px;
 }

@@ -11,8 +11,8 @@
         <title>PokéWiki</title>
     </head>
     <body>
-        <div class="container">
-            <form class="pokemon">
+        <div class="container" >
+            <div class="pokemon">                
                 <div class="pokemon__seccion">
                     <h3 class="pokemon__name" id="name">Nombre pokemon</h3>
                 </div>
@@ -36,10 +36,9 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                
-                  <a class="btn btn-warning text-white" href="/home?type=0">Volver al inicio</a>
-            </form>
+                </div>               
+                <a class="btn btn-warning text-white" href="/home?type=0">Volver al inicio</a>
+            </div>
             <div class="pokemon-img">
                 <div class="img-container">
                     <div>
@@ -47,6 +46,12 @@
                     </div>
                 </div>             
             </div>
+        </div>
+        <div class="detail-other">
+            <p class="btn btn-secondary text-white" id="id"></p>
+            <p class="btn btn-secondary text-white" id="height"></p>
+            <p class="btn btn-secondary text-white" id="weight"></p>
+            <p class="btn btn-secondary text-white" id="type"></p>              
         </div>
         <script src="../controller/DetailController.js"></script>
         <script src="../view/AddViewDetail.js"></script>

@@ -24,7 +24,7 @@ class AddViewHome {
     pokemonsContainer.append(div);
     
     if(user == "0"){
-      userType.textContent = "Maestro Pokemon";
+      userType.textContent = "Maestro Pokémon";
       btnNav.href = "/logout"
       btnNav.textContent = "Cerrar sesión";
       document.querySelector(".pokemon_" + data.id).onclick = function () {
@@ -55,5 +55,4 @@ class AddViewHome {
     }
     
   }
-  
 }
