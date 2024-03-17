@@ -1,4 +1,4 @@
-class Controlador {
+class PokemonListController {
     constructor(modelo, vista) {
         this.modelo = modelo;
         this.vista = vista;

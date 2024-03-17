@@ -4,6 +4,9 @@ class AddViewHome {
     let urlParams = new URLSearchParams(window.location.search);
     let user = urlParams.get('type');
     const userType = document.querySelector("#userType");
+    const btnNav = document.querySelector("#btnNav");
+
+    
     
     const div = document.createElement("div");
     div.classList.add("pokemon_" + data.id);
@@ -22,12 +25,16 @@ class AddViewHome {
     
     if(user == "0"){
       userType.textContent = "Maestro Pokemon";
+      btnNav.href = "/logout"
+      btnNav.textContent = "Cerrar sesión";
       document.querySelector(".pokemon_" + data.id).onclick = function () {
         window.location.href = "poke-detail?pokemon=" + encodeURIComponent(data.id);
       };
       
     }else{
       userType.textContent = "Invitado";
+      btnNav.href = "/login"
+      btnNav.textContent = "Iniciar sesión";
       document.querySelector(".pokemon_" + data.id).onclick = function () {
         Swal.fire({
           icon: 'error',

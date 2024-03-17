@@ -8,7 +8,7 @@
           9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <title>PokeDex</title>
+        <title>PokéWiki</title>
     </head>
     <body>
         <header>
@@ -21,8 +21,7 @@
                 <img src="images/poke-logo.png" 
                   width="90" height="30" class="d-inline-block align-top mx-2" alt="">
                 <form class="form-inline">
-                    <a class="btn btn-outline-success my-2 my-sm-0"  href="/logout" >Search</a>
-                    <a class="btn btn-outline-success my-2 my-sm-0"  href="/logout">Cerrar Sesion</a>
+                    <a class="btn btn-outline-success my-2 mx-2" id="btnNav" href="" ></a>
                 </form>
                 
             </nav>
@@ -30,13 +29,13 @@
         </header>
         <main>
             <div class="todos">
-                <h1>Lista de Pokemons</h1>
+                <h1>Lista de Pokémon</h1>
                 <div class="pokemon-container">
                 </div>
             </div>
            
         </main>
-        <script src="../controller/Controlador.js"></script>
+        <script src="../controller/PokemonListController.js"></script>
         <script src="../view/AddViewHome.js"></script>
         <script src="../model/GetApiData.js"></script>
         <script src="js/main.js"></script>
