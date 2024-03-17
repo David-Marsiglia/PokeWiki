@@ -1,11 +1,11 @@
 import { connection } from './DbConector.js';
 export async function consultarDatos(datos, callback) {
-    const name = datos.nombre;
+    const email = datos.email;
     const pass = datos.contraseña;
     
-    if(name && pass){
-        const result = connection.query('SELECT * FROM usuario_pokewiki WHERE nombre = ?', 
-        [name], 
+    if(email && pass){
+        const result = connection.query('SELECT * FROM usuario_pokewiki WHERE email = ?', 
+        [email], 
         function (err, result) {callback(err, result);
         });
         return result;

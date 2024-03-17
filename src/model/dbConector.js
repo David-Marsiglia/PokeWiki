@@ -1,9 +1,10 @@
 import mysql from 'mysql';
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'david',
-    password: '123456',
-    database: 'pokewiki'
+    host: 'bf78b7bqjhuvxantpb4r-mysql.services.clever-cloud.com',
+    user: 'u9edbbscmqrd4psa',
+    password: 'GIBeOwg36ngU8GghCkQH',
+    database: 'bf78b7bqjhuvxantpb4r',
+    port: '3306'
   });
 
   connection.connect((err) => {
