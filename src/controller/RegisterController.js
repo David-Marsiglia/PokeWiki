@@ -1,5 +1,5 @@
-import { insertarDatos } from "../model/InsertUser.js";
-import { consultarDatos } from "../model/LoginModel.js";
+import { insertarDatos } from "/model/InsertUser.js";
+import { consultarDatos } from "/model/LoginModel.js";
 
 export async function insertar(req, res) {
   const datos = req.body;
