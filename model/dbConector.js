@@ -1,11 +1,11 @@
 import mysql from 'mysql';
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'bf78b7bqjhuvxantpb4r-mysql.services.clever-cloud.com',
-    user: 'u9edbbscmqrd4psa',
-    password: 'GIBeOwg36ngU8GghCkQH',
-    database: 'bf78b7bqjhuvxantpb4r',
-    port: '3306'
+    host: 'process.env.DB_HOST',
+    user: 'process.env.DB_USER',
+    password: 'process.env.DB_PASSWORD',
+    database: 'process.env.DB_NAME',
+    port: 'process.env.DB_PORT'
   });
 
   function connection(callback) {
