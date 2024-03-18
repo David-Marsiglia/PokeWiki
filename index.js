@@ -6,6 +6,7 @@ import { pokeWikiRouter } from './src/routes/PokeWikiRoutes.js';
 import { usersRouter } from './src/routes/UsersRoutes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const port = process.env.PORT || 10000;
 
 const app = express();
 
@@ -25,7 +26,7 @@ app.use(session({
 app.use(pokeWikiRouter(__dirname));
 app.use(usersRouter(__dirname));
 
-app.listen('10000')
+app.listen(port)
 
 
 
