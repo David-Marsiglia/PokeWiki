@@ -1,4 +1,4 @@
-import { connection } from './DbConector.js';
+import { connection } from './dbConector.js';
 import bcryptjs from 'bcryptjs'
 export async function insertarDatos(datos, callback) {
     const email = datos.email;
