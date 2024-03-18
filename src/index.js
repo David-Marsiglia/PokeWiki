@@ -12,7 +12,9 @@ const app = express();
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, '../src')));
+app.use(express.static(path.join(__dirname, 'controller')));
+app.use(express.static(path.join(__dirname, 'model')));
+app.use(express.static(path.join(__dirname, 'view')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
