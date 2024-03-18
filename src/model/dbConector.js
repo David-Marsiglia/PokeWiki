@@ -1,11 +1,13 @@
 import mysql from 'mysql';
+
+//La información de la base de datos no puede ser pública. Se utilizo el servicio Clever Cloud
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'bf78b7bqjhuvxantpb4r-mysql.services.clever-cloud.com',
-    user: 'u9edbbscmqrd4psa',
-    password: 'GIBeOwg36ngU8GghCkQH',
-    database: 'bf78b7bqjhuvxantpb4r',
-    port: '3306'
+    host: '........',
+    user: '.....',
+    password: '.....',
+    database: '.....',
+    port: '....'
   });
 
   function connection(callback) {
