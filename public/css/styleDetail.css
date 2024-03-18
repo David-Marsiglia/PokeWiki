@@ -6,6 +6,7 @@
 
 body {
     background-color: #ECEFF1; 
+    padding: 5%;
 }
 .container {
     display: flex;
@@ -15,7 +16,7 @@ body {
     border: 2px solid rgb(146, 146, 146);
     border-radius: 20px;
     background-color: rgba(61, 60, 60, 0.753);
-    margin: 20px 100px;
+    margin: auto;
     padding: 20px;
 }
 
@@ -74,6 +75,6 @@ body {
     border: 2px solid rgb(146, 146, 146);
     border-radius: 16px;
     background-color: rgba(61, 60, 60, 0.753);
-    margin: 20px 100px;
+    margin: 20px 5%;
     padding: 20px;
 }
