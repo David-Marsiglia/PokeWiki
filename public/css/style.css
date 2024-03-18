@@ -40,6 +40,7 @@ main {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .pokemon-imagen {
