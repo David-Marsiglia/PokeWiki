@@ -1,4 +1,4 @@
-import { consultarDatos } from './model/LoginModel.js';
+import { consultarDatos } from '/model/LoginModel.js';
 import bcryptjs from 'bcryptjs'
 export async function login(req, res) {
     const datos = req.body;
