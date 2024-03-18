@@ -4,9 +4,12 @@ class DetailController {
         this.vista = vista;
     }
 
-    cargarYRenderizarDetail(url) {      
-        this.modelo.cargarDatos(url).then(data => this.vista.addPokemonDetail(data));    
-        
+    cargarYRenderizarDetail(url, id) {     
+        if(!id){
+            window.location.href = "/home?type=0&num=20";
+        }else{
+            this.modelo.cargarDatos(url).then(data => this.vista.addPokemonDetail(data));  
+        }            
     }
    
 }

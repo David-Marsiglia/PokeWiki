@@ -44,8 +44,8 @@
             let success = urlParams.get('success');
             if(success == "false"){
                 Swal.fire({
-                title: '¡Error!',
-                text: 'Correo y/o contraseña incorrectas.',
+                icon: 'error',
+                text: 'Correo y/o contraseña incorrectas',
                 confirmButtonText: 'Aceptar',
              });
             }

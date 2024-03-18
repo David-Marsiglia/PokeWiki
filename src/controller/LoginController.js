@@ -12,7 +12,7 @@ export async function login(req, res) {
         }
         else{
             req.session.usuarioLogueado = true;
-            res.redirect("/home?type=0") 
+            res.redirect("/home?type=0&num=20") 
         }
     });  
   

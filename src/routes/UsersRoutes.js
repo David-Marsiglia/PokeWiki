@@ -10,12 +10,12 @@ export function usersRouter(__dirname) {
     if (req.session.usuarioLogueado) {
       res.redirect("/");
     } else {
-      res.sendFile(path.join(__dirname + "/src/public/formLogin.html"));
+      res.sendFile(path.join(__dirname + "/public/formLogin.html"));
     }
   });
 
   router.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname + "/src/public/formRegister.html"));
+    res.sendFile(path.join(__dirname + "/public/formRegister.html"));
   });
 
   router.post("/register", insertar);

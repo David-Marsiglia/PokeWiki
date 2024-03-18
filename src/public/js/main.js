@@ -1,5 +1,6 @@
 const modelo = new GetApiData();
 const vista = new AddViewHome();
 const controlador = new PokemonListController(modelo, vista);
-
-controlador.cargarYRenderizar("https://pokeapi.co/api/v2/pokemon/");
+let urlParams = new URLSearchParams(window.location.search);
+const num = urlParams.get('num')
+controlador.cargarYRenderizar("https://pokeapi.co/api/v2/pokemon/", Number(num));

@@ -4,10 +4,19 @@ export async function consultarDatos(datos, callback) {
     const pass = datos.contraseña;
     
     if(email && pass){
-        const result = connection.query('SELECT * FROM usuario_pokewiki WHERE email = ?', 
-        [email], 
-        function (err, result) {callback(err, result);
-        });
+        const result = connection((err, connection) => {
+            if (err) {
+              console.error('No se pudo obtener una conexión:', err);
+            } else {
+              connection.query('SELECT * FROM usuario_pokewiki WHERE email = ?', 
+              [email], 
+              function (err, result) {
+                callback(err, result);
+                connection.release(); 
+              });
+            }
+          });
         return result;
     }
   }
+  
