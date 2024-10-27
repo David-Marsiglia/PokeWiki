@@ -48,7 +48,7 @@ class AddViewHome {
 	AddViewHome(user, num) {
 		const btnNav = document.querySelector('#btnNav')
 		const userType = document.querySelector('#userType')
-		
+
 		if (user == '0') {
 			userType.textContent = 'Maestro Pokémon'
 			btnNav.href = '/logout'
@@ -63,8 +63,8 @@ class AddViewHome {
 			window.location.href = '/'
 		}
 	}
-  updateBtnMore(user, num) {
-    const btnMore = document.querySelector('#btnMore')
+	updateBtnMore(user, num) {
+		const btnMore = document.querySelector('#btnMore')
 		if (num < 1026) {
 			btnMore.href = `/${
 				user === '1' ? 'home-guest' : 'home'
