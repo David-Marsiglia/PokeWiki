@@ -8,10 +8,10 @@ class PokemonListController {
 		this.vista.AddViewHome(user, num)
 		const startNum = num >= 20 ? num - 20 : 0
 		const endNum = Math.min(num + 20, 1026)
-		this.viewPokemon(startNum, user, url)
+		this.viewPokemon(startNum, endNum, user, url)
 	}
 
-	viewPokemon(start, user, url) {
+	viewPokemon(start, end, user, url) {
 		for (let i = start; i < end; i++) {
 			this.modelo
 				.cargarDatos(url + i)
