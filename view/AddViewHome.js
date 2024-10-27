@@ -48,10 +48,7 @@ class AddViewHome {
 	AddViewHome(user, num) {
 		const btnNav = document.querySelector('#btnNav')
 		const userType = document.querySelector('#userType')
-
-		let urlParams = new URLSearchParams(window.location.search)
-		let user = urlParams.get('type')
-
+		
 		if (user == '0') {
 			userType.textContent = 'Maestro Pokémon'
 			btnNav.href = '/logout'
