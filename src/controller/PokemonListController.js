@@ -1,24 +1,21 @@
 class PokemonListController {
-  constructor(modelo, vista) {
-    this.modelo = modelo;
-    this.vista = vista;
-  }
+	constructor(modelo, vista) {
+		this.modelo = modelo
+		this.vista = vista
+	}
 
-  cargarYRenderizar(url, num) {
-    this.vista.AddViewHome();
-    if(num >= 20){
-        this.viewPokemon(num-20, num, url)
-    }else if(num == 1020){
-        this.viewPokemon(num, 1026, url)
-    }else{
-        this.viewPokemon(0, 20, url) 
-    }
-  }
-  viewPokemon(iterator, num, url){
-    for (let i = iterator; i < num; i++) {
-        this.modelo
-          .cargarDatos(url + i)
-          .then((data) => this.vista.addViewPokemonList(data, num));
-      }
-  }
+	cargarYRenderizar(url, num, user) {
+		this.vista.AddViewHome(user, num)
+		const startNum = num >= 20 ? num - 20 : 0
+		const endNum = Math.min(num + 20, 1026)
+		this.viewPokemon(startNum, user, url)
+	}
+
+	viewPokemon(start, user, url) {
+		for (let i = start; i < end; i++) {
+			this.modelo
+				.cargarDatos(url + i)
+				.then(data => this.vista.addViewPokemonList(data, user))
+		}
+	}
 }
